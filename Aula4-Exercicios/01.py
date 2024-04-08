@@ -7,7 +7,6 @@ agenda = {'lucas':'98329-4938','flavio':'92849-3928','luiza':'92843-3423', \
 
 print(agenda)
 
-#chave_apaga = str(input("Insira o nome ")).lower()
 
 
 
@@ -36,8 +35,8 @@ def busca(chave):
 
 #busca(chave_busca)
 
-chave = str(input("Insira o nome a ser adicionado")).lower()
-valor = str(input(f"Insira o numero {chave}")).lower()
+#chave = str(input("Insira o nome a ser adicionado")).lower()
+#valor = str(input(f"Insira o numero {chave}")).lower()
 
 def gravar(chave,valor):
     if chave in agenda:
@@ -45,7 +44,7 @@ def gravar(chave,valor):
     else:
         agenda[chave] = valor
 
-gravar(chave,valor)
+#gravar(chave,valor)
 
 #Exibir a posição de cada elemento
 def exibirPosicao():
@@ -53,11 +52,20 @@ def exibirPosicao():
     for contatos in agenda:
         print(contatos,"-", i)
         i+=1
-exibirPosicao()
-
+#exibirPosicao()
+dicionario = str(input("Insira a agenda "))
+def Ordernar(dicionario):
+    if dicionario == "agenda":
+        for nome in sorted(agenda.keys()):
+            print(f"{nome}: {agenda[nome]}")
+    else:
+        print("Insira um nove valido da agenda")
+Ordernar(dicionario)
 
 def menu():
     print(f"A agenda tem {len(agenda)} contatos")
+    print("1 - Imprimir agenda ordenada")
+    print("2 - Gravar uma uma nova anotação")
 
 
 print(agenda)
